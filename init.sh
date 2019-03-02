@@ -12,9 +12,9 @@ run_level=$1
 [[ -d /etc/rc${run_level}.d/ ]] ||  { echo "Need to specify a run level"; exit 127; }
 
 for rc_service in /etc/rc${run_level}.d/K*; do
-        $rc_service stop
+        [[ -e "$rc_service" ]] && $rc_service stop
 done
 
 for rc_service in /etc/rc${run_level}.d/S*; do
-        $rc_service start
+        [[ -e "$rc_service" ]] && $rc_service start
 done
