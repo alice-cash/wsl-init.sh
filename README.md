@@ -3,13 +3,14 @@
 An rc bootup script for linux systems.
 
 # Install
-Add new shortcut under the following directory
+Add new shortcut under the following directory   
 ```"C:\Users\%USERAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"```
 
-Point the shortcut to the following. You can change the 3 to 5 if for example if for example you used x11
+Make the shortcut here the following is an example, assuming this file is /etc/init.sh
+You can change the 3 to 5 for example if for example you used x11   
 ```C:\Windows\System32\bash.exe -c "/usr/bin/sudo /etc/init.sh 3"```
 
-You will either need to configure your suoders to not require a password, e.g.:
+You will either need to configure your suoders to not require a password, e.g.:   
 ```%sudo   ALL=(ALL:ALL) NOPASSWD: ALL```
 
 You can also configure the default user to be root and remove the sudo requirement.
