@@ -2,7 +2,8 @@
 
 # Add new shortcut under the following directory
 # "C:\Users\%USERAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-# Make the shortcut here the following is an example. You can change the 3 to 5 for example if for example you used x11
+# Make the shortcut here the following is an example, assuming this file is /etc/init.sh
+# You can change the 3 to 5 for example if for example you used x11
 # C:\Windows\System32\bash.exe -c "/usr/bin/sudo /etc/init.sh 3"
 
 [[ -z $1 ]] && { echo "Need to specify a run level"; exit 127; }
