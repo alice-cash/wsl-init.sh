@@ -26,4 +26,5 @@ update-rc.d lxcfs disable
 update-rc.d lxd disable
 update-rc.d open-vm-tools disable
 update-rc.d apport disable
-update-rc.d acpid disable```
+update-rc.d acpid disable
+```
