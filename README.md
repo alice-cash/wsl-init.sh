@@ -3,7 +3,11 @@
 An init/rc bootup script for linux systems.
 
 # Install
-Copy wsl-init.sh to /etc/wsl-init.sh or similar location. 
+As root: copy wsl-init.sh to /etc/wsl-init.sh or similar location:
+```
+wget https://raw.githubusercontent.com/masshuku/wsl-init.sh/master/wsl-init.sh -O /etc/wsl-init.sh
+chmod +x /etc/wsl-init.sh
+```
 
 To run it once you have logged into your machine add a new shortcut under the following directory:   
 ```"C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"```
