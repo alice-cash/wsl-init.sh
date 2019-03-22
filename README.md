@@ -1,26 +1,30 @@
 # wsl-init.sh
 
-An rc bootup script for linux systems.
+An init/rc bootup script for linux systems.
 
 # Install
-Add new shortcut under the following directory   
-```"C:\Users\%USERAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"```
+Copy wsl-init.sh to /etc/wsl-init.sh or similar location. 
 
-Make the shortcut here the following is an example, assuming this file is /etc/init.sh
-You can change the 3 to 5 for example if for example you used x11   
-```C:\Windows\System32\bash.exe -c "/usr/bin/sudo /etc/init.sh 3"```
+To run it once you have logged into your machine add a new shortcut under the following directory:   
+```"C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"```
 
-You will either need to configure your suoders to not require a password, e.g.:   
+Make the shortcut here the following is an example, assuming this file is /etc/wsl-init.sh
+You can change the 3 to 5 if for example you used x11 and need a graphical enviroment to boot.       
+```C:\Windows\System32\bash.exe -c "/usr/bin/sudo /etc/wsl-init.sh 3"```
+
+You will need to configure your suoders to not require a password as otherwise you will need to enter your password every time on boot:      
 ```%sudo   ALL=(ALL:ALL) NOPASSWD: ALL```
 
-You can also configure the default user to be root and remove the sudo requirement.
+You can also configure the default user to be root and remove the sudo requirement:    
 https://docs.microsoft.com/en-us/windows/wsl/user-support
+With that your startup script could be shortened to     
+```C:\Windows\System32\bash.exe -c "/etc/wsl-init.sh 3"```
 
 You can now utilize utilities such as update-rc.d to manage startup scripts
 
 # Several notes
-You may need to disable some service as there are several setup by default which can stall bootup.
-On ubuntu 18.04, e.g.:
+You may need to disable some service as there are several setup by default which can stall bootup.    
+On ubuntu 18.04:
 ```update-rc.d lvm2-lvmetad disable
 update-rc.d lvm2-lvmpolld disable
 update-rc.d lxcfs disable
