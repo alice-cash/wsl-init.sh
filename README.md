@@ -5,7 +5,7 @@ An init/rc bootup script for linux systems.
 # Install
 As root: copy wsl-init.sh to /etc/wsl-init.sh or similar location:
 ```
-wget https://raw.githubusercontent.com/masshuku/wsl-init.sh/master/wsl-init.sh -O /etc/wsl-init.sh
+wget https://raw.githubusercontent.com/alice-cash/wsl-init.sh/master/wsl-init.sh -O /etc/wsl-init.sh
 chmod +x /etc/wsl-init.sh
 ```
 
